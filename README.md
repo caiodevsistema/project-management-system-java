@@ -1,43 +1,62 @@
 # Project Management System - Java
 
-Sistema de gerenciamento de projetos desenvolvido em Java como projeto prático de estudos em Java
+A console-based project management system developed in Java as part of my Java learning journey.
 
-## Sobre o projeto
 
-O sistema permite cadastrar uma empresa, desenvolvedores, projetos e tarefas, além de controlar o status das tarefas e calcular os custos estimados dos projetos.
+## About the Project
 
-## Tecnologias
+This project was developed as a practical exercise to apply Object-Oriented Programming concepts through a project management system.
+
+The system allows users to register an enterprise, developers, projects, and tasks, as well as manage task statuses and calculate estimated project costs.
+
+
+## Features
+
+- Register an enterprise
+- Register a developer
+- Register projects
+- Associate a developer with a project
+- Register programming and testing tasks
+- Associate tasks with projects
+- Manage task statuses
+- Validate task status transitions
+- Search projects by ID
+- Search tasks by ID
+- Validate duplicate IDs
+- Remove tasks from a project
+- Calculate the estimated cost of each task
+- Calculate the total estimated project cost
+- Display project summaries
+- Display projects registered in the enterprise
+- Handle exceptions and validate data
+
+
+## Technologies
 
 - Java 17
 - Eclipse IDE
 
-## Como executar
 
-1. Clone o repositório.
-2. Abra o projeto em uma IDE compatível com Java.
-3. Utilize o Java 17 ou superior.
-4. Execute a classe `Program.java`.
+## Concepts Practiced
 
-## Conceitos praticados
-
-- Java
-- Programação Orientada a Objetos
-- Classes e objetos
-- Encapsulamento
-- Associação
-- Composição
-- Herança
-- Polimorfismo
-- Classes abstratas
-- Enumerações
-- Listas de objetos
+- Object-Oriented Programming (OOP)
+- Classes and objects
+- Encapsulation
+- Association
+- Composition
+- Inheritance
+- Polymorphism
+- Abstract classes
+- Enumerations
+- Object collections
 - Streams
 - Lambda expressions
-- Tratamento de exceções
-- Exceções personalizadas
-- Validação de dados
+- Exception handling
+- Custom exceptions
+- Data validation
 
-## Estrutura do projeto
+
+## Project Structure
 
 ```text
 src
@@ -58,66 +77,39 @@ src
             └── TaskStatus.java
 ```
 
-## Código Java
+### Main Entities
 
-O projeto foi desenvolvido utilizando programação orientada a objetos, com separação das responsabilidades entre as entidades do sistema.
+- `Enterprise` — represents the enterprise and maintains the list of projects.
+- `Project` — represents a project, its developer, and its tasks.
+- `Developer` — represents the developer responsible for the project.
+- `Task` — abstract class that represents a task.
+- `TaskProgramming` — represents a programming task.
+- `TaskTesting` — represents a testing task.
+- `TaskStatus` — enum that represents the status of a task.
+- `DomainException` — custom exception used to handle business rule violations.
 
-### Principais entidades
 
-- `Enterprise` — representa a empresa e mantém a lista de projetos.
-- `Project` — representa um projeto, seu desenvolvedor e suas tarefas.
-- `Developer` — representa o desenvolvedor responsável pelo projeto.
-- `Task` — classe abstrata que representa uma tarefa.
-- `TaskProgramming` — representa uma tarefa de programação.
-- `TaskTesting` — representa uma tarefa de testes.
-- `TaskStatus` — enumeração que representa o status da tarefa.
-- `DomainException` — exceção personalizada utilizada para validação das regras de negócio.
+## Object Relationships
 
-### Organização das responsabilidades
+The project also demonstrates relationships between objects:
 
-A classe `Program` é responsável pela interação com o usuário através do console, enquanto as classes do pacote `model.entities` concentram os dados e as regras de negócio do sistema.
+- `Enterprise` has a collection of `Project` objects.
+- `Project` has an association with a `Developer`.
+- `Project` contains a collection of `Task` objects.
+- `TaskProgramming` and `TaskTesting` inherit from the abstract `Task` class.
 
-O projeto utiliza:
 
-- Encapsulamento;
-- Associação entre objetos;
-- Composição;
-- Herança;
-- Polimorfismo;
-- Classes abstratas;
-- Enumerações;
-- Listas de objetos;
-- Streams e expressões lambda;
-- Tratamento de exceções;
-- Exceções personalizadas;
-- Validação de dados.
+## Example of Execution
 
-## Funcionalidades
+The following example demonstrates the main operations of the system, including:
 
-- Cadastro de empresa.
-- Cadastro de desenvolvedor.
-- Cadastro de projetos.
-- Associação de um desenvolvedor a um projeto.
-- Cadastro de tarefas de programação e de testes.
-- Associação de tarefas aos projetos.
-- Controle do status das tarefas:
-  - PENDING;
-  - IN_PROGRESS;
-  - COMPLETED.
-- Validação das transições de status das tarefas.
-- Busca de projetos por ID.
-- Busca de tarefas por ID.
-- Validação de IDs duplicados.
-- Remoção de tarefas de um projeto.
-- Cálculo do custo estimado de cada tarefa.
-- Cálculo do custo total estimado do projeto.
-- Exibição do resumo do projeto.
-- Exibição dos projetos cadastrados na empresa.
-- Tratamento de exceções e validação de dados.
-
-## Exemplo de execução
-
-Abaixo está um exemplo de execução do sistema, demonstrando o cadastro de uma empresa, desenvolvedor, projeto e tarefas, além da alteração de status, remoção de tarefa e cálculo dos custos.
+- Registering an enterprise
+- Registering a developer
+- Creating a project
+- Adding programming and testing tasks
+- Changing task status
+- Removing a task
+- Calculating task and project costs
 
 ```text
 ========== PROJECT MANAGEMENT SYSTEM ==========
@@ -283,11 +275,26 @@ Total Estimated Cost: R$ 800.00
 Do you want to continue (y/n)?: 
 ```
 
-## Próximos passos
+## Next Steps
 
-- Adicionar persistência de dados em banco de dados.
-- Criar uma API REST utilizando Spring Boot.
-- Implementar testes automatizados.
-- Melhorar o tratamento e a validação das entradas.
-- Adicionar novas funcionalidades ao gerenciamento de projetos e tarefas.
-                      
+Continue studying Java and apply new concepts through increasingly complex projects.
+
+Future topics include:
+
+- File handling
+- Interfaces
+- Generics
+- Set and Map
+- Functional programming
+- Lambda expressions
+- Git and GitHub
+- Spring Boot
+- REST APIs
+- Databases
+- Automated testing
+
+## Author
+
+**Caio Ferreira**
+
+GitHub: https://github.com/caiodevsistema
